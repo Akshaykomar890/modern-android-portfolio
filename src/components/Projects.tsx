@@ -35,7 +35,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div 
               key={project.title} 
-              className="group p-8 rounded-xl border border-framer-muted/20 bg-gradient-to-b from-framer-bg/50 to-framer-bg hover:border-framer-accent/50 transition-all duration-300"
+              className="group p-8 rounded-xl border border-framer-muted/20 bg-gradient-to-b from-framer-bg/50 to-framer-bg hover:border-framer-primary/50 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold text-framer-text mb-4 group-hover:text-framer-primary transition-colors">
                 {project.title}
@@ -60,7 +60,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-framer-secondary hover:text-framer-accent transition-colors"
+                  className="text-framer-secondary hover:text-framer-primary transition-colors"
                 >
                   <Github className="w-6 h-6" />
                 </a>
@@ -68,7 +68,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-framer-secondary hover:text-framer-accent transition-colors"
+                  className="text-framer-secondary hover:text-framer-primary transition-colors"
                 >
                   <ExternalLink className="w-6 h-6" />
                 </a>
