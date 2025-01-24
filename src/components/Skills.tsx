@@ -18,7 +18,7 @@ const Skills = () => {
               key={skill.category} 
               className="group p-8 rounded-xl border border-framer-muted/20 bg-gradient-to-b from-framer-bg/50 to-framer-bg hover:border-framer-primary/50 transition-all duration-300"
             >
-              <h3 className="text-2xl font-bold text-framer-primary mb-6 group-hover:text-framer-accent transition-colors">
+              <h3 className="text-2xl font-bold text-framer-primary mb-6 group-hover:text-framer-text transition-colors">
                 {skill.category}
               </h3>
               <ul className="space-y-3">
