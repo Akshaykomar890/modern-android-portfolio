@@ -26,24 +26,29 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-framer-bg">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-android-blue text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-framer-primary to-framer-accent bg-clip-text text-transparent">
           Featured Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.title} className="bg-gray-50 rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-bold text-android-blue mb-3">
+            <div 
+              key={project.title} 
+              className="group p-8 rounded-xl border border-framer-muted/20 bg-gradient-to-b from-framer-bg/50 to-framer-bg hover:border-framer-primary/50 transition-all duration-300"
+            >
+              <h3 className="text-2xl font-bold text-framer-text mb-4 group-hover:text-framer-primary transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="mb-4">
+              <p className="text-framer-secondary mb-6 min-h-[80px]">
+                {project.description}
+              </p>
+              <div className="mb-8">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-android-green/10 text-android-green px-3 py-1 rounded-full text-sm"
+                      className="bg-framer-primary/10 text-framer-primary px-3 py-1 rounded-full text-sm"
                     >
                       {tech}
                     </span>
@@ -55,17 +60,17 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-android-blue hover:text-android-green transition-colors"
+                  className="text-framer-secondary hover:text-framer-primary transition-colors"
                 >
-                  <Github size={20} />
+                  <Github className="w-6 h-6" />
                 </a>
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-android-blue hover:text-android-green transition-colors"
+                  className="text-framer-secondary hover:text-framer-primary transition-colors"
                 >
-                  <ExternalLink size={20} />
+                  <ExternalLink className="w-6 h-6" />
                 </a>
               </div>
             </div>
