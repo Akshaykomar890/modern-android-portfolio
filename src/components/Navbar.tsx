@@ -21,42 +21,45 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-framer-bg/80 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a href="#" className="text-2xl font-bold text-android-blue">Portfolio</a>
-          
-          {/* Desktop Menu */}
+        <div className="flex justify-between items-center h-20">
+          <a href="#" className="text-2xl font-bold text-framer-text">
+            Portfolio
+          </a>
+
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-android-blue hover:text-android-green transition-colors"
+                className="text-framer-text hover:text-framer-primary transition-colors duration-300"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-android-blue"
+            className="md:hidden text-framer-text"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white">
+          <div className="md:hidden bg-framer-bg/95 backdrop-blur-md">
             <div className="flex flex-col space-y-4 px-4 py-6">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-android-blue hover:text-android-green transition-colors"
+                  className="text-framer-text hover:text-framer-primary transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

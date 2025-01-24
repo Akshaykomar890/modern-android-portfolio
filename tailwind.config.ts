@@ -19,6 +19,14 @@ export default {
     },
     extend: {
       colors: {
+        framer: {
+          bg: "#000000",
+          primary: "#0055FF",
+          secondary: "#808080",
+          accent: "#FF3366",
+          text: "#FFFFFF",
+          muted: "#666666",
+        },
         android: {
           green: "#3DDC84",
           blue: "#073042",
@@ -70,6 +78,19 @@ export default {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+      },
+      animation: {
+        "gradient": "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
       },
     },
   },
